@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<!--
+      кря!      
+     /          
+  >(.)__,       
+   (___/  t10i  
+~~~~~~~~~~~~~~~~~
+original by N/A
+created by teplostanski <https://teplostan.ski>
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="author" href="https://teplostan.ski" />
+    <title>Art on Pure CSS • One Div & Conic Gradients • Geometric Walls</title>
+    <style>
+      :root {
+        --width: 200px;
+        --height: calc(var(--width) * 1.5);
+
+        --powder-blue: #97b5d7;
+        --melon: #f37052;
+        --chestnut: #8a3f1f;
+        --cream: #fbe7cc;
+        --brown: #92735f;
+        --dark: #07060b;
+        --grey: #424345;
+      }
+
+      body {
+        min-height: 100dvh;
+        background: #f0e0e0;
+        margin: 0;
+      }
+
+      #walls {
+        width: var(--width);
+        height: var(--height);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 4px solid var(--dark);
+        background: conic-gradient(
+              from 95deg at 30% 0%,
+              var(--grey) 160deg,
+              transparent 160deg
+            )
+            0% 100% / 100% 11%,
+          conic-gradient(
+              from 105deg at 80% 0%,
+              var(--dark) 150deg,
+              transparent 150deg
+            )
+            0% 100% / 100% 20%,
+          conic-gradient(
+              from 0 at 0 129%,
+              transparent 46deg,
+              var(--brown) 46deg
+            )
+            0% 94% / 80% 40%,
+          conic-gradient(
+              from 23deg at -5% 0,
+              transparent 100deg,
+              var(--cream) 100deg
+            )
+            0% 100% / 80% 80%,
+          conic-gradient(
+              from 20deg at -5% 0,
+              transparent 90deg,
+              var(--chestnut) 90deg
+            )
+            100% 89% / 50% 55%,
+          conic-gradient(
+              from 0 at 0 2.5%,
+              transparent 87deg,
+              var(--melon) 88deg
+            )
+            100% 100% / 50% 61%,
+          conic-gradient(from 0 at 0 62px, var(--powder-blue) 40deg) 0px 0px /
+            var(--width) var(--height);
+        background-repeat: no-repeat;
+        box-shadow: inset -3px 1px 3px rgba(0, 0, 0, 0.5),
+          -10px 6px 3px rgba(0, 0, 0, 0.2);
+      }
+
+      @media screen and (min-width: 425px) and (min-height: 488px) {
+        :root {
+          --width: 300px;
+        }
+      }
+
+      @media screen and (min-width: 768px) and (min-height: 768px) {
+        :root {
+          --width: 400px;
+        }
+      }
+
+      @media screen and (min-width: 1024px) and (min-height: 824px) {
+        :root {
+          --width: 500px;
+        }
+      }
+
+      @media screen and (min-width: 2560px) and (min-height: 965px) {
+        :root {
+          --width: 600px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="walls"></div>
+  </body>
+</html>
