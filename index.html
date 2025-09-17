@@ -30,26 +30,31 @@ created by teplostanski <https://teplostan.ski>
         --grey: #424345;
       }
 
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
       body {
-        min-height: 100dvh;
+        min-height: max(100dvh, 340px);
         background: #f0e0e0;
         margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       #walls {
         width: var(--width);
         height: var(--height);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border: 4px solid var(--dark);
+        border: 0.35em solid var(--dark);
         background: conic-gradient(
-              from 95deg at 30% 0%,
-              var(--grey) 160deg,
-              transparent 160deg
+              from 96deg at 29% 0%,
+              var(--grey) 159deg,
+              transparent 159deg
             )
-            0% 100% / 100% 11%,
+            0% 100% / 99% 10.9%,
           conic-gradient(
               from 105deg at 80% 0%,
               var(--dark) 150deg,
@@ -57,11 +62,11 @@ created by teplostanski <https://teplostan.ski>
             )
             0% 100% / 100% 20%,
           conic-gradient(
-              from 0 at 0 129%,
-              transparent 46deg,
-              var(--brown) 46deg
+              from 0deg at 0% 130%,
+              transparent 45deg,
+              var(--brown) 45deg
             )
-            0% 94% / 80% 40%,
+            0% 92.5% / 80% 41%,
           conic-gradient(
               from 23deg at -5% 0,
               transparent 100deg,
@@ -75,8 +80,8 @@ created by teplostanski <https://teplostan.ski>
             )
             100% 89% / 50% 55%,
           conic-gradient(
-              from 0 at 0 2.5%,
-              transparent 87deg,
+              from 0 at 0 2.6%,
+              transparent 88deg,
               var(--melon) 88deg
             )
             100% 100% / 50% 61%,
@@ -97,6 +102,10 @@ created by teplostanski <https://teplostan.ski>
         :root {
           --width: 400px;
         }
+
+        #walls {
+          border: 0.4em solid var(--dark);
+        }
       }
 
       @media screen and (min-width: 1024px) and (min-height: 824px) {
@@ -105,9 +114,19 @@ created by teplostanski <https://teplostan.ski>
         }
       }
 
+      @media screen and (min-width: 1440px) and (min-height: 965px) {
+        #walls {
+          border: 0.5em solid var(--dark);
+        }
+      }
+
       @media screen and (min-width: 2560px) and (min-height: 965px) {
         :root {
           --width: 600px;
+        }
+
+        #walls {
+          border: 0.5em solid var(--dark);
         }
       }
     </style>
