@@ -20,6 +20,6 @@ Art on Pure CSS • One Div & Conic Gradients • September 2025
 
 <div>
   <a href="https://donate.teplostan.ski" target="_blank">
-    <img src="https://gist.githubusercontent.com/teplostanski/efecc707d47591fec971de00e9860d2f/raw/5581a84ee1c4b6c335b4df19f96f8e7af97a1ae2/SUPPORTME.svg">
+    <img src="https://src.teplostan.ski/support-me.svg" alt="Support Me 🖤">
   </a>
 </div>
